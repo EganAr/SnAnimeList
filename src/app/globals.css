@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+    width: 100%;
+    min-height: 300px;
+    max-height: 350px;
+    transition: .3s ease all;
+    -webkit-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    -ms-transtition: .3s ease all;
+    -o-transition: .3s ease all;
+}
+
+img:hover {
+    scale: 104%
+}
