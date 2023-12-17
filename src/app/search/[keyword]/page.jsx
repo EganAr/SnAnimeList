@@ -4,12 +4,13 @@ import { getAnimeResponse } from "@/service/Api";
 
 const Page = async ({ params }) => {
   const { keyword } = params;
-  const SearchAnime = await getAnimeResponse("anime", `q=${keyword}`);
+  const decodeKeyword = decodeURI(keyword);
+  const SearchAnime = await getAnimeResponse("anime", `q=${decodeKeyword}`);
   return (
     <>
       <section>
         <Header
-          title={`Searching for ${keyword}...`}
+          title={`Searching for ${decodeKeyword}...`}
           Linkhref="/popular"
           LinkTitle="View More"
         />
