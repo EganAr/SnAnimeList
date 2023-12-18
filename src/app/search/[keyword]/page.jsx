@@ -11,8 +11,6 @@ const Page = async ({ params }) => {
       <section>
         <Header
           title={`Searching for ${decodeKeyword}...`}
-          Linkhref="/popular"
-          LinkTitle="View More"
         />
         <AnimeList api={SearchAnime} />
       </section>

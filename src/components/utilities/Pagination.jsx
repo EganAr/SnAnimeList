@@ -6,6 +6,7 @@ const Pagination = ({ page, setPage }) => {
     })
   };
   const handleNextPage = () => {
+    if (page > 1037) return;
     setPage((prevState) => prevState + 1);
     scrollTop()
   };
