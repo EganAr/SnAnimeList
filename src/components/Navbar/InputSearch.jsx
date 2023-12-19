@@ -20,7 +20,7 @@ const InputSearch = () => {
   return (
     <div className="relative">
       <input
-        placeholder="Search..."
+        placeholder="Search"
         className="w-full rounded p-1 sm:flex-col"
         ref={searchRef}
         onKeyDown={handleSearch}
