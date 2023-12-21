@@ -6,7 +6,7 @@ import { getAnimeResponse, getRecommendations, reproduce } from "@/service/Api";
 const Home = async () => {
   const topAnime = await getAnimeResponse("top/anime", "limit=10");
   let recomendedAnime = await getRecommendations("recommendations/anime", "entry");
-  recomendedAnime = reproduce(recomendedAnime, 4)
+  recomendedAnime = reproduce(recomendedAnime, 16)
 
   return (
     <>
