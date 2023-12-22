@@ -1,9 +1,16 @@
+import ButtonCollection from "@/components/AnimeList/ButtonCollection";
 import VideoPlayer from "@/components/utilities/VideoPlayer";
 import { getAnimeResponse } from "@/service/Api";
+import { authUserSession } from "@/service/auth-libs";
+import prisma from "@/service/prisma";
 import Image from "next/image";
 
 const Page = async ({ params: id }) => {
   const anime = await getAnimeResponse(`anime/${id.id}`);
+  const user = await authUserSession()
+  const collection = await prisma.collection.findFirst({
+    where: {user_email: user?.email, anime_mal_id: id.id}
+  })
 
   return (
     <>
@@ -48,6 +55,9 @@ const Page = async ({ params: id }) => {
       <div>
         <VideoPlayer youtubeId={anime.data.trailer.youtube_id}/>
       </div>
+      {!collection && user ? <div>
+        <ButtonCollection anime_mal_id={id.id} user_email={user?.email} anime_image={anime.data.images.webp.image_url} anime_title={anime.data.title}/>
+      </div> : <div></div>}
     </>
   );
 };

@@ -20,7 +20,7 @@ const UserAction = async () => {
           className="rounded-full "
         /> : <UserCircle size={30}/>}
       </Link>
-      <Link href={actionURL} className="bg-color-dark px-2 py-1 rounded-lg text-color-accent text-sm text-center hover:opacity-80">{actionLabel}</Link>
+      <Link href={actionURL} className="bg-color-dark px-2 py-1 rounded-lg text-white text-sm text-center hover:opacity-80">{actionLabel}</Link>
     </div>
   );
 };

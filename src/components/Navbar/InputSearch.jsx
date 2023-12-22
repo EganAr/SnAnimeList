@@ -21,11 +21,11 @@ const InputSearch = () => {
     <div className="relative">
       <input
         placeholder="Search"
-        className="w-full rounded p-1 sm:flex-col"
+        className="w-full rounded-md p-1 sm:flex-col bg-color-dark text-white placeholder:text-white opacity-90"
         ref={searchRef}
         onKeyDown={handleSearch}
       />
-      <button className="absolute end-1 top-1" onClick={handleSearch}>
+      <button className="absolute end-1 top-1 text-white" onClick={handleSearch}>
         <MagnifyingGlass size={24} />
       </button>
     </div>
