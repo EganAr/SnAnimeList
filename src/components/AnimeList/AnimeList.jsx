@@ -12,7 +12,7 @@ const AnimeList = ({ api }) => {
             key={id}
           >
             <Image
-              src={anime.images.webp.image_url}
+              src={anime.images.webp.large_image_url}
               alt="..."
               width={350}
               height={350}

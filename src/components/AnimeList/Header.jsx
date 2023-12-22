@@ -1,8 +1,8 @@
 const { default: Link } = require("next/link");
 
-const Header = ({ title, Linkhref, LinkTitle }) => {
+const Header = ({ title, Linkhref, LinkTitle, justify }) => {
   return (
-    <div className="flex justify-between py-4 px-4  ">
+    <div className={`flex ${justify} py-4 px-4`}>
       <h1 className="p-4 text-2xl text-transparent font-bold bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500">
         {title}
       </h1>

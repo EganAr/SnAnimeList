@@ -21,8 +21,8 @@ const Page = async ({ params: id }) => {
       </div>
       <div className="pt-4 px-6 gap-6 text-white flex sm:flex-row flex-col">
         <Image
-          src={anime.data.images.webp.image_url}
-          alt={anime.data.images.jpg.image_url}
+          src={anime.data.images.webp.large_image_url}
+          alt={anime.data.images.jpg.large_image_url}
           width={350}
           height={250}
           className="rounded object-cover min-w-[350px]"
