@@ -17,8 +17,7 @@ const ShowAnime = ({ api }) => {
                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                spaceBetween={10}
                slidesPerView={3}
-               navigation={{ clickable: true }}
-               className="mySwiper"
+               className="mySwiper "
                autoplay={{ delay: 4000 }}
                >
       {api.data?.map((anime, id) => {
@@ -35,7 +34,7 @@ const ShowAnime = ({ api }) => {
               alt="..."
               width={600}
               height={600}
-              className="w-full h-96 object-cover "
+              className="sm:w-full w-80 sm:h-96 h-60 object-cover "
             />
          <h1 className="font-bold md:text-lg text-md w-full py-4">{anime.title}</h1>
           </Link>

@@ -7,26 +7,26 @@ const HighlightAnime = async ({ api }) => {
 
   return (
     <div className="px-6 py-20 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-xl">
-      <div className="bg-black rounded-xl w-full h-full">
-        <div className="flex">
+      <div className="bg-black rounded-xl w-full h-full"> 
+        <div className="flex sm:flex-row flex-col">
           <Image
             src={anime.data.images.webp.large_image_url}
             alt={anime.data.images.jpg.large_image_url}
             width={350}
             height={500}
-            className="rounded-lg object-cover min-w-[350px] p-6"
+            className="rounded-lg object-cover sm:w-[350px] w-96 h-[500px] justify-center items-center p-6"
           />
-          <div className="flex flex-col text-white">
+          <div className="flex flex-col text-white sm:text-left text-center">
             <h1 className="font-bold md:text-2xl text-md pt-6 hover:underline">
               {anime.data.title}
             </h1>
             <h2 className="font-bold md:text-xl text-md pt-6 text-color-accent">
               Series ◽ {anime.data.episodes} Episodes
             </h2>
-            <h3 className="font-bold md:text-sm text-md pt-6 w-3/4 text-justify">
+            <h3 className="font-bold text-sm pt-6 sm:px-0 px-4 sm:w-3/4 w-full text-justify">
               {anime.data.synopsis}
             </h3>
-            <div className="pt-10 ">
+            <div className="sm:pt-10 py-8">
               <Link
                 href={`/anime/23847`}
                 className="cursor-pointer font-bold text-black bg-color-accent hover:text-color-accent hover:bg-black transition-all p-2 w-32 h-10 rounded-lg "
