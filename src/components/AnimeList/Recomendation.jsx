@@ -12,14 +12,14 @@ import 'swiper/css/scrollbar';
 
 const Recomendations = ({ api }) => {
     return (
-        <div className="flex md:flex-row flex-col max-w-screen h-96 px-6 ">
+        <div className="flex md:flex-row flex-col max-w-screen h-[450px] px-6 ">
           <Swiper
                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                spaceBetween={20}
-               slidesPerView={3}
+               slidesPerView={4}
                navigation={{ clickable: true }}
                className="mySwiper"
-               autoplay={{ delay: 2000 }}
+               autoplay={{ delay: 4000 }}
                >
           {api.data?.map((anime, id) => {
             return (
@@ -34,7 +34,7 @@ const Recomendations = ({ api }) => {
                   alt="..."
                   width={350}
                   height={350}
-                  className="md:w-full w-90 hover:opacity-80 h-80 object-cover flex rounded-lg"
+                  className="md:w-full w-90 hover:opacity-80 h-[350px] object-cover flex rounded-lg"
                 />
                 <h1 className="font-bold md:text-lg text-md h-20 p-4">{anime.title}</h1>
               </Link>

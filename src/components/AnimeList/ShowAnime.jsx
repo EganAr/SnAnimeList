@@ -19,9 +19,10 @@ const ShowAnime = ({ api }) => {
                slidesPerView={3}
                navigation={{ clickable: true }}
                className="mySwiper"
-               autoplay={{ delay: 2000 }}
+               autoplay={{ delay: 4000 }}
                >
       {api.data?.map((anime, id) => {
+        console.log(anime)
         return (
             <SwiperSlide >
           <Link

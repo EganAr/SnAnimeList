@@ -32,7 +32,7 @@ const Page = async ({ params: id }) => {
             <div className="bg-color-accent rounded-lg sm:text-lg text-md font-bold">Score</div>
             <h1 className="text-color-accent sm:text-lg text-center py-1">{anime.data.score}</h1>
             <h2 className="text-color-accent text-xs text-center">{anime.data.scored_by} - users</h2>
-          </div>
+          </div>  
           <div className="flex-col text-color-dark sm:w-24 w-20">
             <div className="bg-color-accent rounded-lg sm:text-lg text-md font-bold ">Ranked</div>
             <h1 className="text-color-accent text-3xl text-center py-2">#{anime.data.rank}</h1>
