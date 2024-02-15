@@ -5,7 +5,7 @@ import Pagination from "@/components/utilities/Pagination";
 import { getAnimeResponse } from "@/service/Api";
 import { useEffect, useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [page, setPage] = useState(1);
   const [topAnime, setTopAnime] = useState([]);
 
@@ -29,4 +29,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

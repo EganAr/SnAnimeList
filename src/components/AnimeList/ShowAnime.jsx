@@ -23,7 +23,7 @@ const ShowAnime = ({ api }) => {
       {api.data?.map((anime, id) => {
         console.log(anime)
         return (
-            <SwiperSlide >
+            <SwiperSlide key={id}>
           <Link
             href={`/anime/${anime.mal_id}`}
             className="cursor-pointer text-white hover:text-color-accent transition-all"
